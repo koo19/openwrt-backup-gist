@@ -162,7 +162,7 @@ else
 fi
 
 # 4. Cleanup
-#rm -f "${BACKUP_DIR}/${BACKUP_FILENAME}"
-#rm -f "${JSON_TEMP_FILE}"
+rm -f "${BACKUP_DIR}/${BACKUP_FILENAME}"
+rm -f "${JSON_TEMP_FILE}"
 
 echo "--- Backup Process Finished ---"
