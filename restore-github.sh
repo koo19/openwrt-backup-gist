@@ -197,6 +197,6 @@ else
 fi
 
 # 5. Cleanup
-# rm -f "${FINAL_PATH}"
+rm -f "${FINAL_PATH}"
 
 echo "--- Restore Process Finished ---"
