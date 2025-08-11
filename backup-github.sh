@@ -12,8 +12,8 @@
 
 # --- Configuration ---
 BACKUP_DIR="/tmp/backup_to_github"
-BACKUP_FILENAME="openwrt_config_$(date +%Y%m%d_%H%M%S 2>/dev/null | sed 's/://g').tar.gz"
-[ -z "$(echo "$BACKUP_FILENAME" | grep '_')" ] && BACKUP_FILENAME="openwrt_config_$(date +%Y%m%d)_$(date +%H%M%S 2>/dev/null | sed 's/://g').tar.gz"
+BACKUP_FILENAME="openwrt_config_$(date +%s 2>/dev/null | sed 's/://g').tar.gz"
+[ -z "$(echo "$BACKUP_FILENAME" | grep '_')" ] && BACKUP_FILENAME="openwrt_config_$(date +%s 2>/dev/null | sed 's/://g').tar.gz"
 
 # Simplified description to avoid issues with command substitution in some shells
 GIST_DESCRIPTION="OpenWrt Config Backup (Encrypted)"
