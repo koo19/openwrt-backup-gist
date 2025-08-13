@@ -12,7 +12,8 @@
 
 # --- Configuration ---
 BACKUP_DIR="/tmp/backup_to_github"
-BACKUP_FILENAME="openwrt_config_$(date +%s 2>/dev/null | sed 's/://g').tar.gz"
+HOSTNAME=$(cat /proc/sys/kernel/hostname 2>/dev/null || echo "openwrt")
+BACKUP_FILENAME="${HOSTNAME}_openwrt_config_$(date +%s 2>/dev/null | sed 's/://g').tar.gz"
 [ -z "$(echo "$BACKUP_FILENAME" | grep '_')" ] && BACKUP_FILENAME="openwrt_config_$(date +%s 2>/dev/null | sed 's/://g').tar.gz"
 
 # Simplified description to avoid issues with command substitution in some shells
